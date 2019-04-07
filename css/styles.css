@@ -82,13 +82,10 @@ a:hover
 }
 .top-container
 {
-  width: 50%;
-  margin: 0 auto;
   padding-top: 40%;
 }
 .middle-container
 {
-  width: 50%;
   margin: 8% auto 0 auto;
 }
 .bottom-container
@@ -102,6 +99,7 @@ a:hover
 {
   display: inline-block;
   width: 10%;
+  min-width: 100px;
   text-decoration: none;
   color: #feda6a;
 }
@@ -109,8 +107,7 @@ a:hover
 {
   text-align: left;
   display: inline-block;
-  margin: 5%;
-  min-width: 400px;
+  max-width: 800px;
 }
 .ai-img
 {
@@ -124,7 +121,6 @@ a:hover
 }
 .profile
 {
-  width: 50%;
   margin: 0 auto 5% auto;
 }
 .butn {
@@ -145,11 +141,5 @@ a:hover
 }
 .contact-para
 {
-  width: 50%;
-  min-width: 300px;
-  margin: 10% auto;
-}
-.copyright
-{
-  display: inline-block;
+  margin: 4% auto;
 }
