@@ -108,6 +108,7 @@ a:hover
   text-align: left;
   display: inline-block;
   max-width: 800px;
+  margin: auto 1%;
 }
 .ai-img
 {
