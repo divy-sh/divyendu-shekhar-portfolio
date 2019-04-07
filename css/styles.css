@@ -8,14 +8,20 @@ body
 }
 h1
 {
+  font-size: 250%;
   font-family: 'Satisfy', cursive;
+}
+h3
+{
+  color: #FFF685;
 }
 hr
 {
   border-color: #4C525E;
   border-style: dotted none none none;
-  border-width: 8px;
-  width: 4%;
+  border-width: 10px;
+  width: 8%;
+  margin: 5% auto;
 }
 input
 {
@@ -49,8 +55,8 @@ a:hover
 }
 .p-img
 {
-  width: 10%;
-  height: 10%;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
 }
 .header
@@ -77,10 +83,53 @@ a:hover
 }
 .middle-container
 {
-  padding-top: 5%;
+  max-width: 650px;
+  margin: 8% auto 0 auto;
 }
 .bottom-container
 {
   background-color: #1d1e22;
   padding: 5px;
+}
+.footer-link
+{
+  display: inline-block;
+}
+.skill-row
+{
+  text-align: left;
+  display: inline-block;
+  margin: 5% auto;
+}
+.ai-img
+{
+  float: left;
+  margin-right: 20px;
+}
+.code-img
+{
+  float: right;
+  margin-left: 20px;
+}
+.profile
+{
+  width: 50%;
+  margin: 0 auto 5% auto;
+}
+
+.butn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #4C525E;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #feda6a;
+  text-decoration: none;
 }
