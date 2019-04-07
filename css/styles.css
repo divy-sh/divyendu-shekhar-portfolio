@@ -6,10 +6,6 @@ body
   margin: 0;
   text-align: center;
 }
-footer
-{
-  width: 0;
-}
 h1
 {
   font-family: 'Satisfy', cursive;
@@ -86,4 +82,5 @@ a:hover
 .bottom-container
 {
   background-color: #1d1e22;
+  padding: 5px;
 }
