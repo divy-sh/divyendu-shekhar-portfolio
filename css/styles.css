@@ -96,6 +96,7 @@ a:hover
   background-color: #1d1e22;
   padding: 5px;
   margin: 5% auto auto auto;
+  width: auto;
 }
 .footer-link
 {
