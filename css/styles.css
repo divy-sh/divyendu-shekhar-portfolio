@@ -82,6 +82,8 @@ a:hover
 }
 .top-container
 {
+  width: 50%;
+  margin: 0 auto;
   padding-top: 40%;
 }
 .middle-container
@@ -93,7 +95,7 @@ a:hover
 {
   background-color: #1d1e22;
   padding: 5px;
-  margin-top: 5%;
+  margin: 5% auto auto auto;
 }
 .footer-link
 {
@@ -145,4 +147,8 @@ a:hover
   width: 50%;
   min-width: 300px;
   margin: 10% auto;
+}
+.copyright
+{
+  display: inline-block;
 }
