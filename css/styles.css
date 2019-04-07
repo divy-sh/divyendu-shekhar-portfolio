@@ -35,16 +35,6 @@ textarea
   border-color: #0d0d0d;
   color: #d4d4dc;
 }
-form
-{
-  display: inline-block;
-  margin: 0 auto;
-}
-ul
-{
-  text-align: left;
-  margin-left: 4%;
-}
 a
 {
   color: #feda6a;
@@ -69,7 +59,7 @@ a:hover
 .home
 {
   position: fixed;
-  left: 1%;
+  left: 20px;
   top: 0;
 }
 .bg
@@ -143,4 +133,14 @@ a:hover
 .contact-para
 {
   margin: 4% auto;
+}
+.projects
+{
+  text-align: left;
+  margin-left: 80px;
+}
+.contact
+{
+  text-align: left;
+  margin-left: 100px;
 }
