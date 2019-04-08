@@ -1,6 +1,5 @@
 body
 {
-  background-color: #393f4d;
   color: #d4d4dc;
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -64,25 +63,35 @@ a:hover
 }
 .bg
 {
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  left: 50%;
   top: -10%;
-  left: 0;
-  z-index: -5;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+  min-width: 100%;
+  min-width: 1050px;
+  max-width: 150%;
 }
 .top-container
 {
   padding-top: 40%;
+  padding-bottom: 10%;
 }
 .middle-container
 {
-  margin: 8% auto 0 auto;
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  background-color: #393f4d;
 }
 .bottom-container
 {
   background-color: #1d1e22;
   padding: 5px;
-  margin: 5% auto auto auto;
   width: auto;
 }
 .footer-link
@@ -95,24 +104,22 @@ a:hover
 }
 .skill-row
 {
-  text-align: left;
   display: inline-block;
-  max-width: 800px;
-  margin: auto 1%;
+  width: 50%;
+  margin: 2% 10%;
 }
-.ai-img
+.skill-desc
 {
-  float: left;
-  margin-right: 20px;
-}
-.code-img
-{
-  float: right;
-  margin-left: 20px;
+  top: 0;
+  text-align: left;
+  margin: 0 4%;
+  width: 50%;
+  display: inline-block;
 }
 .profile
 {
   margin: 0 auto 5% auto;
+  width: 30%;
 }
 .butn {
   -webkit-border-radius: 5;
