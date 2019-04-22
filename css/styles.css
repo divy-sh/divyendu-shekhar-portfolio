@@ -1,10 +1,10 @@
 body
 {
-  color: #d4d4dc;
+  color: #fff;
   font-family: 'Raleway', sans-serif;
   margin: 0;
   text-align: center;
-  background-color: #393f4d;
+  background-color: #000;
 }
 h1
 {
@@ -76,6 +76,7 @@ a:hover
 }
 .bg
 {
+  top: 0;
   position: fixed;
   left: 0;
   z-index: -1;
