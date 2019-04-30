@@ -2,6 +2,8 @@ body {
   font-family: 'Rajdhani', sans-serif;
   text-align: center;
   font-size: 1.2em;
+  color: whitesmoke;
+  background-color: black;
 }
 h1, h2, h3, h4 {
   font-family: 'Gugi', cursive;
