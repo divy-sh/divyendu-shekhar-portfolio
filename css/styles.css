@@ -1,12 +1,13 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5rem;
   color: whitesmoke;
   background-color: black;
 }
-h1, h2, h3, h4 {
-  font-family: 'Gugi', cursive;
+.hello {
+  font-family: 'Poiret One', cursive;
+  font-size: 5rem;
 }
 .circular-img {
   border-radius: 100%;
@@ -22,4 +23,14 @@ h1, h2, h3, h4 {
   max-width: 600px;
   width: 95%;
   margin: auto;
+}
+.top-container {
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
 }
