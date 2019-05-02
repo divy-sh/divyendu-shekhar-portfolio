@@ -10,19 +10,17 @@ var scrollAnimate = function() {
 setInterval(scrollAnimate, 1000);
 
 // moving page
-x=0;
 document.querySelector("body").addEventListener("wheel", myFunction);
 function myFunction(e) {
   if (e.deltaY < 0) {
-    x-=100;
     $(".hello").animate({
-      width: '300px'
+      width: '+=300px'
     });
   }
   if (e.deltaY > 0) {
     x+=100;
     $(".hello").animate({
-      width: '300px'
+      width: '-=300px'
     });
   }
 };
