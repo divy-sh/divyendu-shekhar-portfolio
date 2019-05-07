@@ -9,7 +9,7 @@ setInterval(scrollAnimate, 1000);
 // moving page
 var loc = 0
 var prev_loc = 0
-document.querySelector("body").addEventListener("wheel", track_movement);
+document.addEventListener("wheel", track_movement);
 function track_movement(e)
 {
     prev_loc=loc
