@@ -4,7 +4,13 @@ body {
   font-size: 1.5rem;
   color: whitesmoke;
   background-color: black;
-  overflow: hidden
+  overflow: hidden;
+}
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
 }
 .hello {
   font-family: 'Poiret One', cursive;
@@ -26,12 +32,10 @@ body {
   margin: auto;
 }
 .top-container {
-  padding-top: 400px;
-  padding-bottom: 600px;
+  padding-top: 35vh;
+  padding-bottom: 45vh;
 }
-.scroll {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+.details {
+  padding-top: 35vh;
+  padding-bottom: 45vh;
 }

@@ -7,41 +7,25 @@ var scrollAnimate = function() {
 setInterval(scrollAnimate, 1000);
 
 // moving page
-var temp = 3
 var loc = 0
+var prev_loc = 0
 document.querySelector("body").addEventListener("wheel", track_movement);
 function track_movement(e)
 {
+    prev_loc=loc
     if (e.deltaY < 0)
     {
-        temp--;
-        calc_loc();
+        loc--;
+        loc = Math.max(loc,0);
     }
     if (e.deltaY > 0)
     {
-        temp++;
-        calc_loc();
+        loc++;
+        loc = Math.min(loc,3);
     }
+    move_page(loc,prev_loc)
 }
 
-function calc_loc()
-{
-    if(temp==0)
-    {
-        temp=3;
-        loc--;
-        loc = Math.max(0,loc);
-        move_page(loc, loc+1);
-    }
-    if(temp==6)
-    {
-        temp=3;
-        loc++;
-        loc=Math.min(1,loc);
-        move_page(loc, loc-1);
-    }
-    console.log(temp,loc);
-}
 
 function move_page(loc, prev_loc)
 {
@@ -50,15 +34,29 @@ function move_page(loc, prev_loc)
         if(prev_loc==0)
         {
             $(".top-container").slideUp();
-            $(".scroll").hide();
+        }
+        if(prev_loc==1)
+        {
+            $(".name").slideUp();
+        }
+        if(prev_loc==2)
+        {
+            $(".engineer").slideUp();
         }
     }
-    else
+    if(loc<prev_loc)
     {
         if(prev_loc==1)
         {
             $(".top-container").slideDown();
-            $(".scroll").show();
+        }
+        if(prev_loc==2)
+        {
+            $(".name").slideDown();
+        }
+        if(prev_loc==3)
+        {
+            $(".engineer").slideDown();
         }
     }
 }
