@@ -10,12 +10,26 @@ var scrollAnimate = function() {
 setInterval(scrollAnimate, 1000);
 
 // moving page
+var temp = 0
+var location = 0
 document.querySelector("body").addEventListener("wheel", myFunction);
 function myFunction(e) {
   if (e.deltaY < 0) {
     console.log("going down");
+    temp = min(temp--,0);
   }
   if (e.deltaY > 0) {
     console.log("going up");
+    temp = max(temp++,30);
+    }
+    prev_location = location;
+    location = temp/5;
+    if(prev_location!=location) {
+    funcAnimation(temp, location, prev_location);
+    }
+  }
+  function funcAnimation(temp, location, prev_location) {
+    if(location>prev_location) {
+      
     }
   }
