@@ -13,14 +13,10 @@ setInterval(scrollAnimate, 1000);
 document.querySelector("body").addEventListener("wheel", myFunction);
 function myFunction(e) {
   if (e.deltaY < 0) {
-    $(".hello").animate({
-      width: '+=300px'
-    });
+    console.log("going down")
   }
   if (e.deltaY > 0) {
-    x+=100;
-    $(".hello").animate({
-      width: '-=300px'
+    console.log("going up")
     });
   }
 };
