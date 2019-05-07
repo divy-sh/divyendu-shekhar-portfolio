@@ -4,6 +4,7 @@ body {
   font-size: 1.5rem;
   color: whitesmoke;
   background-color: black;
+  overflow: hidden
 }
 .hello {
   font-family: 'Poiret One', cursive;
@@ -25,8 +26,8 @@ body {
   margin: auto;
 }
 .top-container {
-  padding-top: 15%;
-  padding-bottom: 15%;
+  padding-top: 400px;
+  padding-bottom: 600px;
 }
 .scroll {
   position: absolute;
