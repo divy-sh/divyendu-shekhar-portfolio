@@ -10,7 +10,6 @@ setInterval(scrollAnimate, 1000);
 var loc = 0
 var prev_loc = 0
 document.addEventListener("wheel", track_movement);
-document.onscroll(track_movement);
 
 function track_movement(e)
 {
