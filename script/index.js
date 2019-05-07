@@ -13,10 +13,9 @@ setInterval(scrollAnimate, 1000);
 document.querySelector("body").addEventListener("wheel", myFunction);
 function myFunction(e) {
   if (e.deltaY < 0) {
-    console.log("going down")
+    console.log("going down");
   }
   if (e.deltaY > 0) {
-    console.log("going up")
-    });
+    console.log("going up");
+    }
   }
-};
