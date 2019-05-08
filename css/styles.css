@@ -32,10 +32,13 @@ body {
   margin: auto;
 }
 .top-container {
-  padding-top: 35vh;
-  padding-bottom: 45vh;
+  padding-top: 20%;
+  padding-bottom: 60vh;
 }
 .details {
-  padding-top: 35vh;
-  padding-bottom: 45vh;
+  padding-top: 20%;
+  padding-bottom: 60vh;
+}
+@media (max-width: 600) {
+
 }

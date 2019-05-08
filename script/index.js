@@ -37,7 +37,7 @@ function track_movement(e)
     if (e.deltaY > 0)
     {
         loc++;
-        loc = Math.min(loc,5);
+        loc = Math.min(loc,6);
     }
     move_page(loc,prev_loc)
 }
