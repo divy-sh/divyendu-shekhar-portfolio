@@ -10,7 +10,10 @@ setInterval(scrollAnimate, 1000);
 var loc = 0
 var prev_loc = 0
 document.addEventListener("wheel", track_movement);
-
+$(document).on('touchmove', function()
+{
+    $(document).trigger('wheel', track_movement);
+});
 function track_movement(e)
 {
     prev_loc=loc
@@ -26,8 +29,6 @@ function track_movement(e)
     }
     move_page(loc,prev_loc)
 }
-
-
 function move_page(loc, prev_loc)
 {
     if(loc>prev_loc)
