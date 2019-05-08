@@ -10,10 +10,22 @@ setInterval(scrollAnimate, 1000);
 var loc = 0
 var prev_loc = 0
 document.addEventListener("wheel", track_movement);
-$(document).on('touchmove', function()
-{
-    $(document).trigger('wheel', track_movement);
-});
+$(document).swipe( {
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+    prev_loc=loc;
+    if(direction=="up")
+    {
+        loc++;
+        move_page(loc, prev_loc);
+    }
+    else if(direction=="down")
+    {
+        loc--;
+        move_page(loc, prev_loc);
+    }
+    },
+     threshold:0
+  });
 function track_movement(e)
 {
     prev_loc=loc
@@ -25,7 +37,7 @@ function track_movement(e)
     if (e.deltaY > 0)
     {
         loc++;
-        loc = Math.min(loc,3);
+        loc = Math.min(loc,5);
     }
     move_page(loc,prev_loc)
 }
@@ -43,6 +55,14 @@ function move_page(loc, prev_loc)
         }
         if(prev_loc==2)
         {
+            $(".tech").slideUp();
+        }
+        if(prev_loc==3)
+        {
+            $(".webdev").slideUp();
+        }
+        if(prev_loc==4)
+        {
             $(".engineer").slideUp();
         }
     }
@@ -57,6 +77,14 @@ function move_page(loc, prev_loc)
             $(".name").slideDown();
         }
         if(prev_loc==3)
+        {
+            $(".tech").slideDown();
+        }
+        if(prev_loc==4)
+        {
+            $(".webdev").slideDown();
+        }
+        if(prev_loc==5)
         {
             $(".engineer").slideDown();
         }
