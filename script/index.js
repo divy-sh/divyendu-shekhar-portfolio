@@ -1,3 +1,5 @@
+//hiding adress bar in chrome for mobile devices
+window.scrollTo(0,1);
 // scroll text animation
 
 var scrollAnimate = function() {
