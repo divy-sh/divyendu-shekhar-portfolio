@@ -1,93 +1,103 @@
-//hiding adress bar in chrome for mobile devices
-window.scrollTo(0,1);
 // scroll text animation
 
 var scrollAnimate = function() {
+    $(".scroll").animate({bottom: 10});
     $(".scroll").animate({bottom: 20});
-    $(".scroll").animate({bottom: 40});
 };
 setInterval(scrollAnimate, 1000);
 
 // moving page
+
 var loc = 0
 var prev_loc = 0
-document.addEventListener("wheel", track_movement);
+
+//Touch
+
 $(document).swipe( {
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-    prev_loc=loc;
-    if(direction=="up")
-    {
-        loc++;
-        move_page(loc, prev_loc);
+    if(direction=="up"){
+        update_loc(+1);
     }
-    else if(direction=="down")
-    {
-        loc--;
-        move_page(loc, prev_loc);
+    else if(direction=="down"){
+        update_loc(-1);
     }
     },
-     threshold:0
-  });
-function track_movement(e)
-{
-    prev_loc=loc
-    if (e.deltaY < 0)
-    {
+    threshold:0
+});
+
+//Scrollwheel
+
+document.addEventListener("wheel", track_movement);
+function track_movement(e){
+    if (e.deltaY < 0){
+        update_loc(-1);
+    }
+    if (e.deltaY > 0){
+        update_loc(+1);
+    }
+}
+
+//keys
+
+$(document).keydown(function(e){
+    console.log(e.key)
+    if(e.key=="ArrowDown" || e.key=="PageDown"){
+        update_loc(+1);
+    }
+    if(e.key=="ArrowUp" || e.key=="PageUp"){
+        update_loc(-1);
+    }
+});
+
+//update location
+
+function update_loc(i){
+    prev_loc=loc;
+    if(i==-1){
         loc--;
         loc = Math.max(loc,0);
     }
-    if (e.deltaY > 0)
-    {
+    else{
         loc++;
         loc = Math.min(loc,6);
     }
-    move_page(loc,prev_loc)
+    move_page(loc,prev_loc);
 }
-function move_page(loc, prev_loc)
-{
-    if(loc>prev_loc)
-    {
-        if(prev_loc==0)
-        {
+
+//movement function
+
+function move_page(loc, prev_loc){
+    if(loc>prev_loc){
+        if(prev_loc==0){
             $(".top-container").slideUp();
         }
-        if(prev_loc==1)
-        {
+        if(prev_loc==1){
             $(".name").slideUp();
         }
-        if(prev_loc==2)
-        {
+        if(prev_loc==2){
             $(".tech").slideUp();
         }
-        if(prev_loc==3)
-        {
+        if(prev_loc==3){
             $(".webdev").slideUp();
         }
-        if(prev_loc==4)
-        {
+        if(prev_loc==4){
             $(".engineer").slideUp();
         }
     }
-    if(loc<prev_loc)
-    {
-        if(prev_loc==1)
-        {
+    if(loc<prev_loc){
+        if(prev_loc==1){
             $(".top-container").slideDown();
         }
-        if(prev_loc==2)
-        {
+        if(prev_loc==2){
             $(".name").slideDown();
         }
-        if(prev_loc==3)
-        {
+        if(prev_loc==3){
             $(".tech").slideDown();
         }
-        if(prev_loc==4)
-        {
+        if(prev_loc==4){
             $(".webdev").slideDown();
         }
-        if(prev_loc==5)
-        {
+        if(prev_loc==5){
             $(".engineer").slideDown();
         }
     }
