@@ -1,7 +1,7 @@
 body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Poiret One', cursive;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: whitesmoke;
   background-color: black;
   overflow: hidden;
@@ -13,13 +13,12 @@ body {
   right: 0;
 }
 .hello {
-  font-family: 'Poiret One', cursive;
   font-size: 5rem;
 }
 .circular-img {
   border-radius: 100%;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   padding: 20px;
 }
 .footer-link {
@@ -31,11 +30,32 @@ body {
   width: 95%;
   margin: auto;
 }
-.top-container {
-  padding-top: 20%;
+.details {
+  padding-top: 5%;
   padding-bottom: 60vh;
 }
-.details {
-  padding-top: 20%;
-  padding-bottom: 60vh;
+.flexbox {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+.mail {
+  display: block;
+  margin: 5%;
+}
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:clicked {
+  color: gray;
+  text-decoration: none;
+}
+.bottom {
+  padding: 5%;
 }
