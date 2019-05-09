@@ -22,17 +22,22 @@ function track_movement(){
     if(scroll==0){
         $(".scroll").fadeIn();
     }
-    if(scroll>=0 & scroll<50){
+    if(scroll>=0 & scroll<200){
         $(".name").text("I am Divyendu");
+        $(".name").css("font-size", "2.5em")
     }
-    else if(scroll>=50 & scroll<200){
+    else if(scroll>=200 & scroll<400){
         $(".name").text("Tech Enthusiast");
+        $(".name").css("font-size", "2.25em")
     }
-    else if(scroll>=200 & scroll<350){
+    else if(scroll>=400 & scroll<600){
         $(".name").text("Web Developer");
+        $(".name").css("font-size", "2em")
+        
     }
-    else if(scroll>=350 & scroll<500){
+    else if(scroll>=600 & scroll<800){
         $(".name").text("Computer Science Engineer");
+        $(".name").css("font-size", "1.75em")
     }
     prev_loc=loc;
 }
