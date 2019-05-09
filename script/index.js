@@ -12,7 +12,6 @@ var scrollAnimate = function() {
 setInterval(scrollAnimate, 1000);
 
 //details change
-
 $(document).scroll(track_movement)
 function track_movement(){
     var scroll = $(document).scrollTop();
@@ -24,20 +23,21 @@ function track_movement(){
     }
     if(scroll>=0 & scroll<200){
         $(".name").text("I am Divyendu");
-        $(".name").css("font-size", "2.5em")
+        $(".expl").fadeOut();
+
     }
     else if(scroll>=200 & scroll<400){
         $(".name").text("Tech Enthusiast");
-        $(".name").css("font-size", "2.25em")
+        $(".expl").text("I love playing with new teach and always love it when something innovative comes in the market.");
+        $(".expl").fadeIn();
     }
     else if(scroll>=400 & scroll<600){
         $(".name").text("Web Developer");
-        $(".name").css("font-size", "2em")
-        
+        $(".expl").text("I can develop websites like this one. I am still learning the backend development though.");
     }
     else if(scroll>=600 & scroll<800){
         $(".name").text("Computer Science Engineer");
-        $(".name").css("font-size", "1.75em")
+        $(".expl").text("I am currently pursuing Engineering in Computer Science and expect to finish it by the end of 2019.");
     }
     prev_loc=loc;
 }
