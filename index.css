@@ -29,10 +29,16 @@ a:hover , a:visited:hover {
     right: 40px;
     position: fixed;
 }
+.scroll {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
 .top-bar {
     position: fixed;
     padding: 20px;
 }
 .top-container {
-    padding-top: 20rem;
+    padding-top: 15rem;
 }
