@@ -65,3 +65,15 @@ hr {
     padding-bottom: 5rem;
     font-size: 2rem;
 }
+@media (max-width: 800px) {
+    .middle-container {
+        display: block;
+    }
+    .obt {
+        width: 100%;
+    }
+    .list {
+        line-height: 0em;
+        padding-top: 0;
+    }
+}
