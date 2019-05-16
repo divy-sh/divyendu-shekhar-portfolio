@@ -21,14 +21,7 @@ a:link, a:visited {
 a:hover , a:visited:hover {
     color: #facf5a;
 }
-.bar-left {
-    left: 40px;
-    position: fixed;
-}
-.bar-right {
-    right: 40px;
-    position: fixed;
-}
+
 .scroll {
     position: fixed;
     left: 0;
