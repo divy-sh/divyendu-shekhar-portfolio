@@ -1,11 +1,3 @@
-function loop(){
-    $('.scroll').animate({ bottom : 10}, 'slow');
-    $('.scroll').animate({ bottom : 20}, 'slow');
-    loop();
-}
-
-loop();
-// website animate
 // show/hide top bar
 
 $(document).scroll(track);
