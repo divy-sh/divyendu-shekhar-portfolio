@@ -10,3 +10,11 @@ function track(){
         $(".top-bar").fadeIn();
     }
 }
+$(".button").mouseenter(function(){
+    $(".button").clearQueue();
+    $(".button").animate({opacity: "0.4"});
+});
+$(".button").mouseleave(function(){
+    $(".button").clearQueue();
+    $(".button").animate({opacity: "1"});
+});
