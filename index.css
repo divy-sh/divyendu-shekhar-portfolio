@@ -71,6 +71,7 @@ hr {
     }
     .obt {
         width: 100%;
+        padding-right: 0;
     }
     .list {
         line-height: 0em;
