@@ -18,3 +18,6 @@ $(".button").mouseleave(function(){
     $(".button").clearQueue();
     $(".button").animate({opacity: "1"});
 });
+$(".button").click(function(){
+    window.open("Resume.pdf");
+});
