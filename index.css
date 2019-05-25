@@ -60,10 +60,11 @@ hr {
     padding-right: 2rem;
 }
 .top-bar {
+    padding-top: 5rem;
     position: fixed;
 }
 .top-container {
-    padding-top: 15rem;
+    padding-top: 20rem;
     padding-bottom: 5rem;
     font-size: 2rem;
 }
