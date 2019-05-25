@@ -54,6 +54,7 @@ hr {
 }
 .middle-container {
     display: flex;
+    color: #393e46
 }
 .quad {
     width: 25%;
