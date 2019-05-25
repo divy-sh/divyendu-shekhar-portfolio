@@ -23,7 +23,6 @@ hr {
 }
 .bio-container {
     text-align: justify;
-    line-height: 1.5;
 }
 .button {
     background-color: #eeeeee;
@@ -55,11 +54,6 @@ hr {
 }
 .middle-container {
     display: flex;
-    line-height: 1.5;
-}
-.project-container {
-    display: flex;
-    line-height: 1.5;
 }
 .quad {
     width: 25%;
