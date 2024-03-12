@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Divyendu Shekhar's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-</head>
+  </head>
 <body>
   <header>
     <nav>
@@ -16,17 +16,19 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="about">
+      <img src="div.jpeg" alt="" style="display: inline; max-width: 20%; border-radius: 50%;">
       <h1>About Me</h1>
       <p>Divyendu Shekhar</p>
       <p>+1 857 707 9042 | divyendu.shekhar@outlook.com | linkedin.com/in/divysh | Boston, MA</p>
       <p>I am a passionate software engineer with experience in Java, Python, AWS, Git, Jenkins, Spinnaker, SpringBoot, JUnit, ReactJS, and more. I have a strong academic background with a Master's degree from Northeastern University and a Bachelor's degree from Sikkim Manipal University.</p>
+      <span><a href="https://www.linkedin.com/in/divysh/"><button>LinkedIn</button></a></span>
+      <span><a href="https://github.com/divy-sh"><button>GitHub</button></a></span>
     </section>
 
     <section id="education">
@@ -68,7 +70,7 @@
           </ul>
         </li>
         <li>
-          <h3>Wipro Technologies</h3>
+          <h3>Wipro</h3>
           <p><strong>Project Engineer</strong> | ReactJS, Python, Java, AWS, PostgreSQL, JUnit<br>Aug 2019 - Nov 2019</p>
           <ul>
             <li>Created and engineered a comprehensive software suite for a client, which optimized power grid maintenance procedures.</li>
@@ -91,15 +93,24 @@
       <h2>My Projects</h2>
       <ul>
         <li>
+          <h3>A Chess Engine using ANN, alpha-beta pruning, and Monte Carlo Tree Search</h3>
+          <p>Developed a chess engine with a strength of 1600 elo in Golang.</p>
+          <p>Used alpha-beta pruning with iterative deepening along with ANN for evaluation function for each state.</p>
+          <p>Another version of the engine uses Monte Carlo Tree Search.</p>
+        </li>
+        <li>
           <h3>Event Management App for Events at Northeastern University</h3>
-          <p>Developed an event management web app using SpringBoot, React, and MySQL, deployed on AWS.</p>
+          <p>Developed an event management web app for events at Northeastern University.</p>
+          <p>Used SpringBoot for backend, React.js for frontend, and MySQL as DB, deployed on AWS.</p>
         </li>
         <li>
           <h3>Advanced Image Processing Application using MVC Architecture</h3>
-          <p>Built an image processing app using Java, featuring image compression, histogram analysis, color correction, etc.</p>
+          <p>Built an image processing app using Java, following MVC architecture and various design patterns.<p>
+          <p>The app supports various features such as lossless and lossy image compression, histogram analysis, color correction, Levels Adjustment, etc.</p>
         </li>
         <li>
           <h3>Real-Time American Sign Language to Speech Translation</h3>
+          <p>Designed a capsule network model to classify ASL into text, and then text into speech in real time.</p>
           <p>Designed and implemented using OpenCV, TensorFlow, and pyttsx3.</p>
         </li>
         <li>
@@ -131,21 +142,6 @@
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
   </main>
 
   <footer>
