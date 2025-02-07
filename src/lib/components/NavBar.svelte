@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Burger from './Hamburger.svelte';
-	import FaHome from 'svelte-icons/fa/FaHome.svelte';
 	import routes from '$lib/NavRoutes';
 	let opened = false;
 	export let segment: string;
@@ -8,9 +7,6 @@
 
 <div class={opened ? 'NavBar open' : 'NavBar'}>
 	<div class="innerContainer">
-		<a href="/">
-			<FaHome />
-		</a>
 		<div class="burger">
 			<Burger bind:open={opened} />
 		</div>
@@ -85,6 +81,7 @@
 	}
 
 	.NavBar {
+		position: fixed;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -96,6 +93,9 @@
 		height: 80px;
 		overflow: hidden;
 		transition: height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		mask: linear-gradient(to top, transparent, black 25%);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
 	}
 
 	.buttons {
@@ -156,6 +156,9 @@
 		}
 		.responsiveButtons {
 			display: none !important;
+		}
+		.innerContainer {
+			justify-content: center;
 		}
 	}
 </style>

@@ -3,15 +3,14 @@
 	import Button from '$lib/components/Button.svelte';
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
-	import { page } from '$app/stores';
 	import Modal from '$lib/components/Modal.svelte';
-	import { onMount } from 'svelte';
 	import { customBackground } from '$lib/store';
 	import { Email } from '$lib/Constants';
     import Projects from '$lib/components/projects.svelte';
     import Education from '$lib/components/education.svelte';
     import Experiences from '$lib/components/experiences.svelte';
     import Achievements from '$lib/components/achievements.svelte';
+    import { onMount } from 'svelte';
 
 	let copied = false;
 
@@ -41,9 +40,34 @@
 	const copy = () => {
 		navigator.clipboard.writeText(Email);
 	};
+
+	let section = "#home";
+	let segments: any;
+	onMount(() => {
+		segments = document.querySelectorAll('section');
+		updateNavSelection();
+	});
+
+	const handleScroll = (_event: any) => {
+		updateNavSelection();
+	};
+
+	const updateNavSelection = () => {
+		const viewportCenter = window.innerHeight / 2;
+		for (const segment of segments) {
+			if (!(segment instanceof HTMLElement)) continue;
+			const rect = segment.getBoundingClientRect();
+			const segmentTop = rect.top;
+			const segmentBottom = rect.bottom;
+			if (segmentTop <= viewportCenter && segmentBottom >= viewportCenter) {
+				section = '#' + segment.id;
+				break;
+			}
+		}
+	}
 </script>
 
-<svelte:body use:cssVariables={{ background: $customBackground }} />
+<svelte:body use:cssVariables={{ background: $customBackground }} on:scroll={handleScroll} />
 
 <Modal>
 	<div slot="content" class="modalContainer">
@@ -82,9 +106,11 @@
 		<Button>Send Email</Button>
 	</div>
 </Modal>
-<Navbar segment={$page.url.pathname} />
+<Navbar segment={section} />
 
-<slot />
+<section id="home">
+	<slot />
+</section>
 <section id="experience">
 	<Experiences />
 </section>
