@@ -9,7 +9,7 @@
 	<title>Divyendu Shekhar - Main page</title>
 </svelte:head>
 <main>
-	<h1>Hi!✋ <br /> I'm Divyendu Shekhar a Software Engineer 💻 based in Boston, USA</h1>
+	<h1>Hi!✋ <br /> I'm Divyendu Shekhar, a Software Engineer 💻 based in Boston, USA</h1>
 	<div class="icons">
 		<div
 			role="button"
