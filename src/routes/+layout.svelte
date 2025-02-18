@@ -4,8 +4,8 @@
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	import Modal from '$lib/components/Modal.svelte';
-	import { customBackground } from '$lib/store';
-	import { Email } from '$lib/Constants';
+	import { customBackground } from '$lib/data/store';
+	import { Email } from '$lib/data/Constants';
     import Projects from '$lib/components/projects.svelte';
     import Education from '$lib/components/education.svelte';
     import Experiences from '$lib/components/experiences.svelte';

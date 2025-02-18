@@ -2,7 +2,7 @@
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
-	import { modalOpened } from '$lib/store';
+	import { modalOpened } from '$lib/data/store';
 </script>
 
 <svelte:head>

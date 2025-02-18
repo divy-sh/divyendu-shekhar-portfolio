@@ -1,5 +1,5 @@
 <script>
-	import educationList from '$lib/Education';
+	import educationList from '$lib/data/Education';
 </script>
 
 <div class="educationContainer">

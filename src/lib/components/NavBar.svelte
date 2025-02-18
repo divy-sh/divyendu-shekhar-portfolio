@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Burger from './Hamburger.svelte';
-	import routes from '$lib/NavRoutes';
+	import routes from '$lib/data/NavRoutes';
 	let opened = false;
 	export let segment: string;
 </script>

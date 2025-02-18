@@ -1,5 +1,5 @@
 <script>
-	import projects from '$lib/Projects';
+	import projects from '$lib/data/Projects';
 </script>
 
 <div class="projectContainer">

@@ -1,5 +1,5 @@
 <script>
-	import experiences from '$lib/Experiences';
+	import experiences from '$lib/data/Experiences';
 </script>
 
 <div class="experienceContainer">

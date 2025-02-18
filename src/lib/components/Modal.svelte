@@ -1,5 +1,5 @@
 <script>
-	import { modalOpened } from '$lib/store';
+	import { modalOpened } from '$lib/data/store';
 	let isOpen = false;
 	let closing = false;
 
