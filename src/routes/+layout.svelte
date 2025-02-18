@@ -11,6 +11,7 @@
     import Experiences from '$lib/components/experiences.svelte';
     import Achievements from '$lib/components/achievements.svelte';
     import { onMount } from 'svelte';
+	import "../app.css"
 
 	let copied = false;
 
