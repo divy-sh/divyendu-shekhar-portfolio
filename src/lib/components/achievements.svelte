@@ -1,5 +1,5 @@
 <script>
-	import achievements from '$lib/Achievements';
+	import achievements from '$lib/data/Achievements';
 </script>
 
 <div class="experienceContainer">
