@@ -1,37 +1,13 @@
 <script>
-	import { goto } from '$app/navigation';
 	import { Email } from '$lib/data/Constants';
 </script>
 
 <div
-	class="button"
+	class="cursor-pointer h-10 max-w-[200px] rounded-lg bg-amber-700 flex justify-center items-center font-medium hover:bg-amber-800 transition"
 	role="button"
 	tabindex="0"
-	on:keypress={() => {
-		window.location.href = `mailto:${Email}`;
-	}}
+	on:keypress={() => { window.location.href = `mailto:${Email}`; }}
 	on:click={() => window.location.href = `mailto:${Email}`}
 >
 	<slot />
 </div>
-
-<style>
-	.button {
-		cursor: pointer;
-		height: 40px;
-		max-width: 200px;
-		border-radius: 10px;
-		background: #ca3c25;
-
-		background-size: 150% 150%;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: 500;
-	}
-
-	.button:hover {
-		animation: gradient 2s ease infinite;
-	}
-</style>

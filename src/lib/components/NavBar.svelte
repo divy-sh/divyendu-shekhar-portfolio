@@ -1,164 +1,28 @@
 <script lang="ts">
-	import Burger from './Hamburger.svelte';
-	import routes from '$lib/data/NavRoutes';
-	let opened = false;
-	export let segment: string;
+    import Burger from './Hamburger.svelte';
+    import routes from '$lib/data/NavRoutes';
+    let opened = false;
+    export let segment: string;
 </script>
 
-<div class={opened ? 'NavBar open' : 'NavBar'}>
-	<div class="innerContainer">
-		<div class="burger">
-			<Burger bind:open={opened} />
-		</div>
-		<div class="buttons">
-			{#each routes as route}
-				<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
-					>{route.label}</a
-				>
-			{/each}
-		</div>
-	</div>
-	<div class="responsiveButtons buttons">
-		{#each routes as route}
-			<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
-				>{route.label}</a
-			>
-		{/each}
-	</div>
+<div class={`NavBar ${opened ? '!flex-col !items-center !h-[330px]' : ''} fixed flex flex-col justify-between items-center w-full box-border p-5 h-15 overflow-hidden transition-all duration-200 ease-in-out backdrop-blur-2xl md:py-5 md:px-0 md:flex md:flex-col md:justify-center md:items-center md:max-w-[900px] md:mx-auto`} >
+    <div class="innerContainer flex justify-between items-center w-full box-border md:justify-center">
+        <div class="burger md:hidden">
+            <Burger bind:open={opened} />
+        </div>
+        <div class="buttons hidden justify-between items-center font-medium md:flex">
+            {#each routes as route}
+                <a class={`button ${segment === route.href ? 'selected text-white relative after:content-[\'\'] after:bg-amber-700 after:block after:h-[3px] after:w-full after:absolute after:-bottom-1' : 'text-white/40 relative hover:after:content-[\'\'] hover:after:bg-amber-700 hover:after:block hover:after:h-[3px] hover:after:w-full hover:after:absolute hover:after:-bottom-1'}  no-underline cursor-pointer transition-colors duration-200 ease-in-out m-2.5 h-[30px]`} href={route.href}
+                    >{route.label}</a
+                >
+            {/each}
+        </div>
+    </div>
+    <div class="responsiveButtons buttons mt-5 w-full flex !flex-col md:hidden">
+        {#each routes as route}
+            <a class={`button ${segment === route.href ? 'selected text-white relative after:content-[\'\'] after:bg-amber-700 after:block after:h-[3px] after:w-full after:absolute after:-bottom-1' : 'text-white/40 relative hover:after:content-[\'\'] hover:after:bg-amber-700 hover:after:block hover:after:h-[3px] hover:after:w-full hover:after:absolute hover:after:-bottom-1'} button max-w-[100px] w-full text-center no-underline cursor-pointer transition-colors duration-200 ease-in-out m-2.5 h-[30px]`} href={route.href}
+                >{route.label}</a
+            >
+        {/each}
+    </div>
 </div>
-
-<style>
-	:global(.logo) {
-		cursor: pointer;
-		height: 30px;
-		width: 30px;
-	}
-
-	.open {
-		flex-direction: column !important;
-		align-items: center !important;
-		height: 330px !important;
-		transition: height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-	}
-
-	.selected {
-		position: relative;
-		color: white;
-	}
-
-	.button:hover::after {
-		content: '';
-		background: #ca3c25;
-		display: block;
-		height: 3px;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-	}
-
-	.button.selected:after {
-		content: '';
-		background: #ca3c25;
-		display: block;
-		height: 3px;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-	}
-
-	.innerContainer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		max-width: 900px;
-		box-sizing: border-box;
-	}
-
-	.innerContainer :global(a) {
-		height: 30px;
-		color: white;
-	}
-
-	.NavBar {
-		position: fixed;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		max-width: 900px;
-		box-sizing: border-box;
-		padding: 20px;
-		height: 80px;
-		overflow: hidden;
-		transition: height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-		mask: linear-gradient(to top, transparent, black 25%);
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-	}
-
-	.buttons {
-		display: none;
-		justify-content: space-between;
-		align-items: center;
-		font-weight: 500;
-	}
-
-	.responsiveButtons {
-		margin-top: 20px;
-		width: 100%;
-		display: flex !important;
-		flex-direction: column;
-	}
-
-	.responsiveButtons .button {
-		max-width: 100px;
-		width: 100%;
-		text-align: center;
-	}
-
-	.buttons .button {
-		padding: 0;
-		cursor: pointer;
-		transition: color 0.2s ease-in-out;
-		text-decoration: none;
-		position: relative;
-		margin: 10px;
-		color: hsla(0, 0%, 100%, 0.4);
-	}
-
-	.button.selected {
-		color: white;
-	}
-
-	.burger :global(button) {
-		margin: 0;
-	}
-
-	@media (min-width: 900px) {
-		.NavBar {
-			padding: 20px 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			max-width: 900px;
-			margin: 0 auto;
-		}
-
-		.buttons {
-			display: flex;
-		}
-
-		.NavBar .burger {
-			display: none !important;
-		}
-		.responsiveButtons {
-			display: none !important;
-		}
-		.innerContainer {
-			justify-content: center;
-		}
-	}
-</style>
