@@ -12,6 +12,7 @@
     import Achievements from '$lib/components/achievements.svelte';
     import { onMount } from 'svelte';
 	import "../app.css"
+    import Footer from '$lib/components/footer.svelte';
 
 	let copied = false;
 
@@ -124,6 +125,8 @@
 <section id="achievements">
 	<Achievements />
 </section>
+<Footer />
+
 <style>
 	* {
 		box-sizing: border-box;
