@@ -1,6 +1,6 @@
 <script>
 	import experiences from '$lib/data/Experiences';
-	import Card from '$lib/components/Card.svelte';
+	import Card from '$lib/components/card.svelte';
 </script>
 
 <div class="w-full mx-auto p-4">
