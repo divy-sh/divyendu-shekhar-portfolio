@@ -29,7 +29,7 @@
 			<div class="flex flex-wrap gap-2 text-sm text-gray-300">
 				<span class="font-medium">Technologies:</span>
 				{#each technologies as tech}
-					<span class="bg-gray-700 px-2 py-1 rounded-md">{tech}</span>
+					<span class="bg-neutral-700 px-2 py-1 rounded-md">{tech}</span>
 				{/each}
 			</div>
 		{/if}
