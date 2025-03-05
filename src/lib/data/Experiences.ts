@@ -1,7 +1,7 @@
 const experiences = [
 	{
 		company: 'SS&C Technologies',
-		title: 'Software Engineer Co-op Intern',
+		title: 'Software Engineer Co-op',
 		location: 'Boston, MA',
 		date: 'Jul 2024 - Dec 2024',
 		description: [`Developed and maintained full-stack solutions using C# .NET, Angular, and React, enhancing user 
