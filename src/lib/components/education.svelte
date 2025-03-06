@@ -10,7 +10,8 @@
 			<Card 
 				title={education.school} 
 				subtitle={education.degree} 
-				date={education.date} 
+				date={education.date}
+				location={education.location}
 				description={education.description} 
 			/>
 		{/each}
