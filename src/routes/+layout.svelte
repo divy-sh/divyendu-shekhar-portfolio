@@ -13,6 +13,7 @@
     import { onMount } from 'svelte';
 	import "../app.css"
     import Footer from '$lib/components/footer.svelte';
+    import Skills from '$lib/components/skills.svelte';
 
 	let copied = false;
 
@@ -112,6 +113,7 @@
 
 <section id="home">
 	<slot />
+	<Skills />
 </section>
 <section id="experience">
 	<Experiences />
@@ -139,7 +141,7 @@
 	}
 
 	:global(#svelte) {
-		width: 100vw;
+		width: auto;
 		height: 100%;
 		max-width: 900px;
 

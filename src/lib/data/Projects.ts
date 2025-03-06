@@ -21,13 +21,13 @@ expiration, and designed for scalability.`],
 	},
 	{
 		title: 'RustDNS Resolver',
-		technologies: ['Rust'],
+		technologies: ['Rust', 'Concurrency', 'DNS'],
 		description: [`A recursive DNS resolver with support for LRU cache, automatic TTL expiration, and concurrent lookups.`],
 		url: 'https://github.com/divy-sh/rdns-resolver-rs'
 	},
 	{
 		title: 'Imago',
-		technologies: ['Golang'],
+		technologies: ['Go', 'MVC', 'Design Patterns'],
 		description: [`A CLI image editor written in Go, supports a variety of image processing operations for modifying images.`],
 		url: 'https://github.com/divy-sh/imago'
 	},
