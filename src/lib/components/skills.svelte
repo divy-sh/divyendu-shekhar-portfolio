@@ -1,5 +1,5 @@
 <script>
-	import skills from '$lib/data/fuckingidiotgitnothandlingcasesensitivefilenames';
+	import skills from '$lib/data/Skills';
 </script>
 
 <div class="w-full mx-auto p-6">
