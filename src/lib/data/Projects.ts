@@ -34,7 +34,7 @@ expiration, and designed for scalability.`],
 	{
 		title: 'Chess Bellator',
 		technologies: ['Python'],
-		description: [`A chess engine utilizing Alpha-Beta pruning, transposition tables], and a Deep Neural Network (DNN)
+		description: [`A chess engine utilizing Alpha-Beta pruning, transposition tables, and a Deep Neural Network (DNN)
 		evaluation function for strategic move assessment.`],
 		url: 'https://github.com/divy-sh/chess-bellator'
 	},
