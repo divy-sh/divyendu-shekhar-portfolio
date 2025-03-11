@@ -10,7 +10,16 @@ const experiences = [
 	{
 		company: 'Clarivate',
 		title: 'Software Engineer',
-		date: 'Nov 2019 - Aug 2023',
+		date: 'Oct 2021 - Aug 2023',
+		location: 'Bangalore, India',
+		description: [`Contributed as a Backend Engineer within the platform team, specializing in developing Spring (Java) 
+			based microservices catering to user authentication, authorization, and identity management. Supported over 50 
+			business units across the organizational spectrum.`]
+	},
+	{
+		company: 'Clarivate',
+		title: 'Associate Software Engineer',
+		date: 'Nov 2019 - Oct 2021',
 		location: 'Bangalore, India',
 		description: [`Contributed as a Backend Engineer within the platform team, specializing in developing Spring (Java) 
 			based microservices catering to user authentication, authorization, and identity management. Supported over 50 
