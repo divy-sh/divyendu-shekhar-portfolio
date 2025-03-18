@@ -5,7 +5,7 @@ const Education = [
 		date: 'Sep 2023 - May 2025',
 		location: 'Boston, USA',
 		description:
-			['Relevant Coursework: Program Design Paradigms, Database Management Systems, Algorithms.']
+			['Relevant Coursework: Program Design Paradigms, Database Management Systems, Algorithms, Cloud Computing.']
 	},
 	{
 		school: 'Sikkim Manipal University',
