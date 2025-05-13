@@ -5,7 +5,7 @@
     export let segment: string;
 </script>
 
-<div class={`NavBar ${opened ? '!flex-col !items-center !h-[330px]' : ''} fixed top-5 left-1/2 -translate-x-1/2 flex flex-col justify-between items-center box-border p-5 h-15 overflow-hidden transition-all duration-200 ease-in-out backdrop-blur-2xl bg-white/10 rounded-2xl shadow-xl md:py-5 md:px-0 md:flex md:flex-col md:justify-center md:items-center md:max-w-[900px] md:w-[90%]`}>
+<div class={`NavBar ${opened ? '!flex-col !items-center !h-[330px]' : ''} fixed top-5 left-1/2 -translate-x-1/2 flex flex-col justify-between items-center box-border p-5 h-15 overflow-hidden transition-all duration-200 ease-in-out backdrop-blur-2xl rounded-2xl shadow-xl md:py-5 md:px-0 md:flex md:flex-col md:justify-center md:items-center md:max-w-[900px] md:w-[90%]`}>
     <div class="innerContainer flex justify-between items-center w-full box-border md:justify-center">
         <div class="burger md:hidden">
             <Burger bind:open={opened} />
