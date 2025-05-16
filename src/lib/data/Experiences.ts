@@ -4,16 +4,16 @@ const experiences = [
 		title: 'Software Engineer Co-op',
 		location: 'Boston, MA',
 		date: 'Jul 2024 - Dec 2024',
-		description: [`Developed and maintained full-stack solutions using C# .NET, Angular, and React, enhancing user experience
-			and system performance for SS&C EZE’s Portfolio Management, Accounting, and Trading solutions.`]
+		description: [`Developed and maintained full-stack solutions using .NET (C#), Angular, and React, for SS&C EZE’s Portfolio
+			Management, Accounting, and Trading solutions.`]
 	},
 	{
 		company: 'Clarivate',
 		title: 'Software Engineer',
 		date: 'Oct 2021 - Aug 2023',
 		location: 'Bangalore, India',
-		description: [`Contributed as a Backend Engineer, specializing in Spring (Java) microservices catering to user authentication,
-			authorization, and identity management, used by over 50 business units across the organizational spectrum.`]
+		description: [`Designed, developed, and maintained Spring Boot (Java) microservices for centralized user authentication,
+			authorization, and identity management, supporting over 50 business units.`]
 	},
 	{
 		company: 'Clarivate',
